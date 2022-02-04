@@ -1,6 +1,5 @@
 import { Disclosure, Transition } from "@headlessui/react";
 import { MdArrowForward } from "react-icons/md";
-import { faq } from "./data";
 
 export const FAQ = ({questions}) => {
   return (

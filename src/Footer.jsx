@@ -1,6 +1,6 @@
 import React from "react";
-import { MdEmail, MdFacebook, MdGroups, MdLockClock, MdMenuBook, MdOutlineMap } from "react-icons/md";
-import { FaInstagram, FaPhone, FaRegClock } from "react-icons/fa";
+import { MdEmail, MdFacebook, MdGroups, MdMenuBook, MdOutlineMap } from "react-icons/md";
+import { FaPhone, FaRegClock } from "react-icons/fa";
 import { contact } from "./data";
 
 export const Footer = () => {
