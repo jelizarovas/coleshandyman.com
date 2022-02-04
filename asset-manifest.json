@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/jelizarovas/coleshandyman.com/static/css/main.1da96f12.css",
+    "main.js": "/jelizarovas/coleshandyman.com/static/js/main.2c78c019.js",
+    "index.html": "/jelizarovas/coleshandyman.com/index.html",
+    "main.1da96f12.css.map": "/jelizarovas/coleshandyman.com/static/css/main.1da96f12.css.map",
+    "main.2c78c019.js.map": "/jelizarovas/coleshandyman.com/static/js/main.2c78c019.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1da96f12.css",
+    "static/js/main.2c78c019.js"
+  ]
+}
