@@ -1,3 +1,4 @@
+import { About } from "./About";
 import { ContactUs } from "./ContactUs";
 import { contact, photos, questions, reviews, services } from "./data";
 import { FAQ } from "./FAQ";
@@ -12,6 +13,7 @@ export function App() {
     <div className="App flex flex-col justify-between min-h-screen">
       <main>
         <Header contact={contact} />
+        <About />
         <Testimonials reviews={reviews} />
         <Services services={services} />
         <Gallery photos={photos} />

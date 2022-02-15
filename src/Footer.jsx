@@ -1,6 +1,6 @@
 import React from "react";
 import { MdEmail, MdFacebook, MdGroups, MdMenuBook, MdOutlineMap } from "react-icons/md";
-import { FaPhone, FaRegClock } from "react-icons/fa";
+import { FaPhone, FaRegClock, FaTwitter } from "react-icons/fa";
 import { contact } from "./data";
 
 export const Footer = () => {
@@ -12,27 +12,53 @@ export const Footer = () => {
       <div className=" flex container  mx-auto flex-col lg:flex-row justify-around text-white py-3 px-10">
         <div className="pb-2 lg:w-1/4">
           <FooterHeader title="SERVICE AREA" Icon={MdOutlineMap} />
-          <div className=" py-1 flex justify-between">New Jersey, Pennsylvania</div>
+          <div className=" py-1 flex justify-between">
+            <ul className="w-full">
+              <li className="transition-all p-2 text-xl hover:bg-slate-500">New Jersey</li>
+              <li className="transition-all p-2 text-xl hover:bg-slate-500">Pennsylvania</li>
+              <li className="transition-all p-2 text-xl hover:bg-slate-500">New York</li>
+              <li className="transition-all p-2 text-xl hover:bg-slate-500">Delaware</li>
+            </ul>
+          </div>
         </div>
 
         <div className="lg:w-1/4 pb-2 ">
           <FooterHeader title="social" Icon={MdGroups} />
-          <div className="flex  py-6 text-xl ">
-            <div className="  ">
-              <a
-                href="https://www.facebook.com/profile.php?id=100071086755698"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white flex  items-center"
-              >
-                <MdFacebook className="mr-2" /> Facebook
-              </a>
-            </div>
+          <div className="flex  my-3  text-xl mx-2 rounded  transition-all hover:bg-slate-500 ">
+            <a
+              href="https://www.facebook.com/profile.php?id=100071086755698"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white flex w-full py-3 px-4   items-center"
+            >
+              <MdFacebook className="mr-2" /> Facebook
+            </a>
           </div>
+          <div className="flex  my-3  text-xl mx-2 rounded  transition-all hover:bg-slate-500 ">
+            <a
+              href="https://twitter.com/say_dave"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white flex w-full py-3 px-4   items-center"
+            >
+              <FaTwitter className="mr-2" /> Twitter
+            </a>
+          </div>
+        </div>
 
+        <div className="mb-3">
+          <FooterHeader title="operating hours" Icon={FaRegClock} />
+
+          <div className="text-center py-4 text-xl relative">
+            <ul>
+              <li>9am - 5pm Regular</li>
+              <li className="text-center py-4 text-xl relative">
+                24 / 7 Emergencies <span className="text-green-500 absolute top-2 ml-2 ">●</span>
+              </li>
+            </ul>
+          </div>
+          <FooterHeader title="contact" Icon={MdMenuBook} />
           <div className=" pb-2 ">
-            <FooterHeader title="contact" Icon={MdMenuBook} />
-
             <ul className="list-unstyled flex flex-col space-y-4 justify-around py-6 text-xl px-6">
               <li className="flex">
                 <FaPhone className="mr-2" />
@@ -48,22 +74,6 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-        </div>
-
-        <div className="mb-3">
-          <FooterHeader title="operating hours" Icon={FaRegClock} />
-
-          <ul className="space-y-2">
-            <li>Mon - 12 am - 12 pm</li>
-            <li>Tue - 12 am - 12 pm</li>
-            <li>Wed - 12 am - 12 pm</li>
-            <li>Thu - 12 am - 12 pm</li>
-            <li>Fri - 12 am - 12 pm</li>
-            <li>Sat - 12 am - 12 pm</li>
-            <li>
-              <strong>Sun - Closed</strong>
-            </li>
-          </ul>
         </div>
       </div>
       <div className="footer-copyright text-center py-5 text-muted">
