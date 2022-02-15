@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/coleshandyman.com/static/css/main.1da96f12.css",
-    "main.js": "/coleshandyman.com/static/js/main.2c78c019.js",
+    "main.css": "/coleshandyman.com/static/css/main.359ce00c.css",
+    "main.js": "/coleshandyman.com/static/js/main.1e7ebccc.js",
     "index.html": "/coleshandyman.com/index.html",
-    "main.1da96f12.css.map": "/coleshandyman.com/static/css/main.1da96f12.css.map",
-    "main.2c78c019.js.map": "/coleshandyman.com/static/js/main.2c78c019.js.map"
+    "main.359ce00c.css.map": "/coleshandyman.com/static/css/main.359ce00c.css.map",
+    "main.1e7ebccc.js.map": "/coleshandyman.com/static/js/main.1e7ebccc.js.map"
   },
   "entrypoints": [
-    "static/css/main.1da96f12.css",
-    "static/js/main.2c78c019.js"
+    "static/css/main.359ce00c.css",
+    "static/js/main.1e7ebccc.js"
   ]
 }
