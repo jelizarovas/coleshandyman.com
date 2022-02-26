@@ -1,9 +1,10 @@
 {
   "name": "coleshandyman.com",
-  "homepage": "https://jelizarovas.github.io/coleshandyman.com",
+  "homepage": "https://coleshandyman.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.4.0",
     "@headlessui/react": "^1.4.3",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",

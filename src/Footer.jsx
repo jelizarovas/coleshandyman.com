@@ -1,7 +1,7 @@
 import React from "react";
 import { MdEmail, MdFacebook, MdGroups, MdMenuBook, MdOutlineMap } from "react-icons/md";
 import { FaPhone, FaRegClock, FaTwitter } from "react-icons/fa";
-import { contact } from "./data";
+import { contact, social } from "./data";
 
 export const Footer = () => {
   return (
@@ -26,7 +26,7 @@ export const Footer = () => {
           <FooterHeader title="social" Icon={MdGroups} />
           <div className="flex  my-3  text-xl mx-2 rounded  transition-all hover:bg-slate-500 ">
             <a
-              href="https://www.facebook.com/profile.php?id=100071086755698"
+              href={social.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className="text-white flex w-full py-3 px-4   items-center"
@@ -36,7 +36,7 @@ export const Footer = () => {
           </div>
           <div className="flex  my-3  text-xl mx-2 rounded  transition-all hover:bg-slate-500 ">
             <a
-              href="https://twitter.com/say_dave"
+              href={social.twitter}
               target="_blank"
               rel="noopener noreferrer"
               className="text-white flex w-full py-3 px-4   items-center"

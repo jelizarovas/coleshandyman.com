@@ -3,7 +3,21 @@ export const contact = {
   cell: "(609) 417-0688",
   mobile: "(856) 221-3494",
   fax: "(856) 221-3494",
-  email: "chilldc37@icloud.com",
+  email: "dave@coleshandyman.com", //"chilldc37@icloud.com",
+  address: {
+    street: "39 Pond View Ln ",
+    city: "Sicklerville",
+    state: "NJ",
+    zip: "08081",
+    full: "39 Pond View Ln Sicklerville, NJ 08081",
+  },
+};
+
+export const social = {
+  yelp: "https://www.yelp.com/biz/dave-coles-handyman-services-sicklerville-nj",
+  twitter: "https://twitter.com/say_dave",
+  facebook: "https://www.facebook.com/profile.php?id=100071086755698",
+  bbb: "https://www.bbb.org/us/nj/elmer/profile/handyman/coles-handyman-service-0221-90155400",
 };
 
 export const services = {

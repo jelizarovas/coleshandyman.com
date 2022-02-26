@@ -1,12 +1,27 @@
-export const ContactUs = ({ contact }) => {
-  //sign up with email js to receive emails https://www.emailjs.com/pricing/
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
-  const handleSubmit = (e) => {
+export const ContactUs = ({ contact }) => {
+  const [isSent, setSent] = React.useState(false);
+  const [error, setError] = React.useState(null);
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log(e.target.name.value);
-    console.log(e.target.email.value);
-    console.log(e.target.description.value);
+
+    emailjs.sendForm("service_bea44be", "template_au7qqoo", form.current, "s39AgGgv6MEx1QD8R").then(
+      (result) => {
+        console.log(result.text);
+        setSent(true);
+      },
+      (error) => {
+        console.log(error.text);
+        setError(error.text);
+      }
+    );
   };
+  if (error) return <div>Email not sent: {error}</div>;
+  if (isSent) return <div>Thank you, your email was sent!</div>;
 
   return (
     <section className="bg-gray-600 py-10">
@@ -24,11 +39,11 @@ export const ContactUs = ({ contact }) => {
           </div>
           <div className="mt-8 text-center"></div>
         </div>
-        <form className="" onSubmit={handleSubmit}>
+        <form className="" ref={form} onSubmit={sendEmail}>
           <div>
             <span className="uppercase text-sm text-gray-600 font-bold">Full Name</span>
             <input
-              name="name"
+              name="user_name"
               className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="text"
               placeholder=""
@@ -37,7 +52,7 @@ export const ContactUs = ({ contact }) => {
           <div className="mt-8">
             <span className="uppercase text-sm text-gray-600 font-bold">Email</span>
             <input
-              name="email"
+              name="user_email"
               className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
               type="text"
             />
@@ -45,17 +60,16 @@ export const ContactUs = ({ contact }) => {
           <div className="mt-8">
             <span className="uppercase text-sm text-gray-600 font-bold">Message</span>
             <textarea
-              name="description"
+              name="message"
               className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
             ></textarea>
           </div>
           <div className="mt-8">
-            <button
+            <input
               type="submit"
+              value="Send Message"
               className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline"
-            >
-              Send Message
-            </button>
+            />
           </div>
         </form>
       </div>
