@@ -49,10 +49,10 @@ export const Footer = () => {
         <div className="mb-3">
           <FooterHeader title="operating hours" Icon={FaRegClock} />
 
-          <div className="text-center py-4 text-xl relative">
+          <div className="text-left py-4 px-4 text-xl relative">
             <ul>
               <li>9am - 5pm Regular</li>
-              <li className="text-center py-4 text-xl relative">
+              <li className=" py-4 text-xl relative">
                 24 / 7 Emergencies <span className="text-green-500 absolute top-2 ml-2 ">●</span>
               </li>
             </ul>
