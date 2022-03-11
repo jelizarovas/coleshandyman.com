@@ -1,14 +1,14 @@
 import { Disclosure, Transition } from "@headlessui/react";
 import { MdArrowForward } from "react-icons/md";
 
-export const FAQ = ({questions}) => {
+export const FAQ = ({ questions }) => {
   return (
-    <div className="w-full container mx-auto px-4 py-16 transition-all">
+    <section id="faq" className="w-full container mx-auto px-4 py-16 transition-all">
       <h2 className="text-3xl text-center py-5 font-bold">Frequently Asked Questions</h2>
 
       <div className="p-2">
-        {questions.map(({ question, answer }) => (
-          <Disclosure>
+        {questions.map(({ question, answer }, idx) => (
+          <Disclosure key={idx}>
             {({ open }) => (
               <>
                 <Question question={question} open={open} />
@@ -18,7 +18,7 @@ export const FAQ = ({questions}) => {
           </Disclosure>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

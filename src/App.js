@@ -5,18 +5,20 @@ import { FAQ } from "./FAQ";
 import { Footer } from "./Footer";
 import { Gallery } from "./Gallery";
 import { Header } from "./Header";
+import { Navbar } from "./Navbar";
 import { Services } from "./Services";
 import { Testimonials } from "./Testimonials";
 
 export function App() {
   return (
     <div className="App flex flex-col justify-between min-h-screen">
-      <main>
+      <Navbar />
         <Header contact={contact} />
+      <main>
         <About />
-        <Testimonials reviews={reviews} />
         <Services services={services} />
         <Gallery photos={photos} />
+        <Testimonials reviews={reviews} />
         <FAQ questions={questions} />
         <ContactUs contact={contact} />
       </main>

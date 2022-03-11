@@ -92,7 +92,7 @@ export const Gallery = () => {
   };
 
   return (
-    <section className="text-gray-700 ">
+    <section id="gallery" className="text-gray-700 ">
       <h2 className="text-3xl text-center py-5 font-bold">Gallery</h2>
       <ReactGallery
         photos={images.map((img) => ({ ...img, src: process.env.PUBLIC_URL + img.src }))}

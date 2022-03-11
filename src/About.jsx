@@ -2,7 +2,7 @@ import React from "react";
 
 export const About = () => {
   return (
-    <section className=" py-10 bg-indigo-50">
+    <section id="about" className=" py-10 bg-indigo-50">
       <h2 className="text-3xl text-center py-5 font-bold">About Cole</h2>
       <div className="flex flex-wrap justify-around container mx-auto">
         As a kid I found enjoyment from fixing things others saw as broken. I took this passion with me and I started
