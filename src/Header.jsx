@@ -30,7 +30,7 @@ export const Header = ({ services }) => {
           </div>
           {/* <div className="text-right py-1">Fully Insured</div> */}
 
-          <ul className="text-sm bg-yellow-600 px-10 py-5 text-black   md:text-2xl flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0 md:items-center items-start  ">
+          <ul className="text-sm mx-10 bg-yellow-600 px-4 md:px-10 py-4 md:py-5 text-black   md:text-2xl flex flex-row md:flex-row space-x-2 md:space-x-4 space-y-0 md:space-y-0 md:items-center items-center justify-around  ">
             <li className="flex items-center space-x-2">
               <GiRoundStar /> <span>Commercial</span>
             </li>
@@ -45,7 +45,7 @@ export const Header = ({ services }) => {
               <span> Residential</span>
             </li>
           </ul>
-          <ul className="text-md  mt-2   font-semibold flex space-x-2 justify-between  ">
+          <ul className="text-md  mt-2 mx-10   font-semibold flex space-x-2 justify-around md:justify-center flex-wrap md:flex-nowrap  ">
             {Object.keys(services).map((service, idx) => (
               <ServiceLink label={service.split(" ")[0]} url={service} />
             ))}
@@ -55,11 +55,11 @@ export const Header = ({ services }) => {
         <div className="w-full flex flex-col md:flex-row  items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-10">
           <a
             href="#contact"
-            className="w-48 md:w-80 border-2 border-yellow-700 rounded-xl px-4 md:px-10 py-2 md:py-4 text-2xl md:text-4xl flex items-center justify-center space-x-4"
+            className="w-48 md:w-64 border-2 border-yellow-700 hover:border-yellow-400 hover:bg-yellow-400 hover:text-black  transition-all px-4 md:px-6 py-2 md:py-4 text-2xl md:text-3xl flex items-center justify-center space-x-4"
           >
             <MdEmail /> <span>Get Quote</span>
           </a>
-          <button className="w-48 md:w-80 border-2 border-yellow-600 text-black bg-yellow-600 rounded-xl px-4 md:px-10 py-2 md:py-4 text-2xl md:text-4xl flex items-center justify-center space-x-4">
+          <button className="w-48 md:w-64 border-2 border-yellow-600 hover:border-yellow-400 text-black bg-yellow-600 hover:bg-yellow-400  transition-all px-4 md:px-6 py-2 md:py-4 text-2xl md:text-3xl flex items-center justify-center space-x-4">
             <MdPhone /> <span>Schedule</span>
           </button>
         </div>
@@ -75,7 +75,7 @@ export const Header = ({ services }) => {
 
 const ServiceLink = ({ url, label }) => {
   return (
-    <li className="relative group w-full text-center">
+    <li className="relative group md:w-full text-center">
       <span className=" absolute left-0  w-0 h-full bg-yellow-600   group-hover:w-full transition-all "></span>
       <a href={`#${url}`} className="test h-full w-full px-2 select-none">
         {label}
