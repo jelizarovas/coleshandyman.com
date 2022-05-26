@@ -5,7 +5,7 @@ const links = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Gallery", href: "#gallery" },
-  { label: "Testimonials", href: "#testimonials" },
+  // { label: "Testimonials", href: "#testimonials" },
   { label: "Faq", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
@@ -14,7 +14,7 @@ const NavLink = (props) => {
   return (
     <li>
       <a
-        className="block px-2  py-2 pr-4 pl-3 hover:text-white  rounded md:bg-transparent hover:md:text-blue-700 md:p-0 dark:text-white"
+        className="block px-2  py-2 pr-4 pl-3 select-none  rounded md:bg-transparent hover:text-blue-700 md:p-0 "
         aria-current="page"
         href={props.href}
         onClick={props.toggleOpen}
@@ -31,11 +31,17 @@ export const Navbar = () => {
   const toggleOpen = () => setOpen((v) => !v);
 
   return (
-    <nav className="w-full fixed z-50 top-0 bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+    <nav className="w-full fixed z-50 top-0 bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="#" className="flex items-center">
-          <img src="/favicon.ico" className="mr-3 h-4 sm:h-4" alt="ColesHandyman.Com logo" />
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Coles Handyman</span>
+        <a href="#top" className="flex items-center">
+          <img
+            src="/favicon.ico"
+            className="mr-3 h-4 sm:h-4"
+            alt="ColesHandyman.Com logo"
+          />
+          <span className="self-center text-xl font-semibold whitespace-nowrap ">
+            Coles Handyman
+          </span>
         </a>
         <button
           data-collapse-toggle="mobile-menu"
@@ -71,7 +77,10 @@ export const Navbar = () => {
             ></path>
           </svg>
         </button>
-        <div className={`${isOpen ? "" : "hidden"} w-full md:block md:w-auto`} id="mobile-menu">
+        <div
+          className={`${isOpen ? "" : "hidden"} w-full md:block md:w-auto`}
+          id="mobile-menu"
+        >
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             {links.map((link, idx) => (
               <NavLink key={idx} {...link} toggleOpen={toggleOpen} />

@@ -13,3 +13,25 @@ html, #root {
 #root {
     padding-top: 24px;
 }
+
+::selection { background-color: rgb(202 138 4); color: black }
+
+.test {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  color: rgb(202 138 4);
+  overflow: hidden;
+  background: linear-gradient(to right, black, black 50%, rgb(202 138 4) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 175ms ease;
+
+}
+
+.test:hover {
+  background-position: 0 100%;
+}

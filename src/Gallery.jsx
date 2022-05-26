@@ -1,8 +1,5 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import ReactGallery from "react-photo-gallery";
-import Lightbox from "react-awesome-lightbox";
-// You need to import the CSS only once
-import "react-awesome-lightbox/build/style.css";
 
 const images = [
   {
@@ -78,25 +75,28 @@ const images = [
 ];
 
 export const Gallery = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+  // const [currentImage, setCurrentImage] = useState(0);
+  // const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
-  const openLightbox = useCallback((event, { photo, index }) => {
-    setCurrentImage(index);
-    setViewerIsOpen(true);
-  }, []);
+  // const openLightbox = useCallback((event, { photo, index }) => {
+  //   setCurrentImage(index);
+  //   setViewerIsOpen(true);
+  // }, []);
 
-  const closeLightbox = () => {
-    setCurrentImage(0);
-    setViewerIsOpen(false);
-  };
+  // const closeLightbox = () => {
+  //   setCurrentImage(0);
+  //   setViewerIsOpen(false);
+  // };
 
   return (
     <section id="gallery" className="text-gray-700 ">
       <h2 className="text-3xl text-center py-5 font-bold">Gallery</h2>
       <ReactGallery
-        photos={images.map((img) => ({ ...img, src: process.env.PUBLIC_URL + img.src }))}
-        onClick={openLightbox}
+        photos={images.map((img) => ({
+          ...img,
+          src: process.env.PUBLIC_URL + img.src,
+        }))}
+        // onClick={openLightbox}
       />
       {/* <Lightbox images={images} /> */}
       {/* <ModalGateway>

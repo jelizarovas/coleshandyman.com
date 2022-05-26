@@ -1,5 +1,11 @@
 import React from "react";
-import { MdEmail, MdFacebook, MdGroups, MdMenuBook, MdOutlineMap } from "react-icons/md";
+import {
+  MdEmail,
+  MdFacebook,
+  MdGroups,
+  MdMenuBook,
+  MdOutlineMap,
+} from "react-icons/md";
 import { FaPhone, FaRegClock, FaTwitter } from "react-icons/fa";
 import { contact, social } from "./data";
 
@@ -7,17 +13,28 @@ export const Footer = () => {
   return (
     <footer
       className="bg-gray-600 flex  flex-col justify-around py-10  text-white"
-      style={{ backgroundImage: 'url("/images/scissors-bg.jpg")', boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, 0.9)" }}
+      style={{
+        backgroundImage: 'url("/images/scissors-bg.jpg")',
+        boxShadow: "inset 0 0 0 2000px rgba(0, 0, 0, 0.9)",
+      }}
     >
       <div className=" flex container  mx-auto flex-col lg:flex-row justify-around text-white py-3 px-10">
         <div className="pb-2 lg:w-1/4">
           <FooterHeader title="SERVICE AREA" Icon={MdOutlineMap} />
           <div className=" py-1 flex justify-between">
             <ul className="w-full">
-              <li className="transition-all p-2 text-xl hover:bg-slate-500">New Jersey</li>
-              <li className="transition-all p-2 text-xl hover:bg-slate-500">Pennsylvania</li>
-              <li className="transition-all p-2 text-xl hover:bg-slate-500">New York</li>
-              <li className="transition-all p-2 text-xl hover:bg-slate-500">Delaware</li>
+              <li className="transition-all p-2 text-xl select-none">
+                New Jersey
+              </li>
+              <li className="transition-all p-2 text-xl  select-none">
+                Pennsylvania
+              </li>
+              <li className="transition-all p-2 text-xl  select-none">
+                New York
+              </li>
+              <li className="transition-all p-2 text-xl  select-none">
+                Delaware
+              </li>
             </ul>
           </div>
         </div>
@@ -53,7 +70,8 @@ export const Footer = () => {
             <ul>
               <li>9am - 5pm Regular</li>
               <li className=" py-4 text-xl relative">
-                24 / 7 Emergencies <span className="text-green-500 absolute top-2 ml-2 ">●</span>
+                24 / 7 Emergencies{" "}
+                <span className="text-green-500 absolute top-2 ml-2 ">●</span>
               </li>
             </ul>
           </div>
@@ -77,7 +95,8 @@ export const Footer = () => {
         </div>
       </div>
       <div className="footer-copyright text-center py-5 text-muted">
-        {contact.displayName} © 2022 {new Date().getFullYear() > 2022 && ` - ${new Date().getFullYear()}`} by
+        {contact.displayName} © 2022{" "}
+        {new Date().getFullYear() > 2022 && ` - ${new Date().getFullYear()}`} by
         <a
           target="_blank"
           rel="noopener noreferrer"
