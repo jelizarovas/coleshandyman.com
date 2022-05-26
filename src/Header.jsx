@@ -2,7 +2,7 @@ import { GiRoundStar } from "react-icons/gi";
 import { MdPhone, MdEmail } from "react-icons/md";
 import { services } from "./data";
 
-export const Header = ({ services }) => {
+export const Header = ({ services, contact }) => {
   return (
     <header
       className=" h-[1000px] overflow-hidden  max-h-screen bg-black flex items-center text-yellow-600  "
@@ -57,11 +57,14 @@ export const Header = ({ services }) => {
             href="#contact"
             className="w-48 md:w-64 border-2 border-yellow-700 hover:border-yellow-400 hover:bg-yellow-400 hover:text-black  transition-all px-4 md:px-6 py-2 md:py-4 text-2xl md:text-3xl flex items-center justify-center space-x-4"
           >
-            <MdEmail /> <span>Get Quote</span>
+            <MdEmail /> <span>Quote</span>
           </a>
-          <button className="w-48 md:w-64 border-2 border-yellow-600 hover:border-yellow-400 text-black bg-yellow-600 hover:bg-yellow-400  transition-all px-4 md:px-6 py-2 md:py-4 text-2xl md:text-3xl flex items-center justify-center space-x-4">
+          <a
+            href={`tel:${contact?.cell || contact.mobile}`}
+            className="w-48 md:w-64 border-2 border-yellow-600 hover:border-yellow-400 text-black bg-yellow-600 hover:bg-yellow-400  transition-all px-4 md:px-6 py-2 md:py-4 text-2xl md:text-3xl flex items-center justify-center space-x-4"
+          >
             <MdPhone /> <span>Schedule</span>
-          </button>
+          </a>
         </div>
       </div>
       {/*  */}

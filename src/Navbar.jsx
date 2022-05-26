@@ -1,26 +1,33 @@
 import React from "react";
 
 const links = [
-  { label: "Top", href: "#top" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Gallery", href: "#gallery" },
-  // { label: "Testimonials", href: "#testimonials" },
-  { label: "Faq", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Top", href: "top" },
+  { label: "About", href: "about" },
+  { label: "Services", href: "services" },
+  { label: "Gallery", href: "gallery" },
+  // { label: "Testimonials", href: "testimonials" },
+  { label: "Faq", href: "faq" },
+  { label: "Contact", href: "contact" },
 ];
 
-const NavLink = (props) => {
+const NavLink = ({ yOffset = 0, ...props }) => {
   return (
     <li>
-      <a
-        className="block px-2  py-2 pr-4 pl-3 select-none  rounded md:bg-transparent hover:text-blue-700 md:p-0 "
+      <button
+        type="button"
+        className="block px-2 cursor-pointer  py-2 pr-4 pl-3 select-none  rounded md:bg-transparent hover:text-yellow-700 md:p-0 "
         aria-current="page"
-        href={props.href}
-        onClick={props.toggleOpen}
+        onClick={() => {
+          const anchor = document.querySelector(`#${props.href}`);
+          const y =
+            anchor.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+          window.history.replaceState("", "", `#${props.href}`);
+          if (props.toggleOpen) props.toggleOpen();
+        }}
       >
-        {props.label}
-      </a>
+        {props.label}{" "}
+      </button>
     </li>
   );
 };
@@ -31,16 +38,16 @@ export const Navbar = () => {
   const toggleOpen = () => setOpen((v) => !v);
 
   return (
-    <nav className="w-full fixed z-50 top-0 bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-800">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
+    <nav className="w-full  fixed z-50 top-0 bg-neutral-900  text-white px-2 sm:px-4 py-2.5 ">
+      <div className="container flex flex-wrap justify-between items-center mx-auto px-10">
         <a href="#top" className="flex items-center">
           <img
             src="/favicon.ico"
-            className="mr-3 h-4 sm:h-4"
+            className="mr-1 h-5 sm:h-5 bg-white p-0.5 rounded"
             alt="ColesHandyman.Com logo"
           />
           <span className="self-center text-xl font-semibold whitespace-nowrap ">
-            Coles Handyman
+            <strong className="text-yellow-600">Coles</strong>Handyman
           </span>
         </a>
         <button
