@@ -15,7 +15,7 @@ const NavLink = ({ yOffset = 0, ...props }) => {
     <li>
       <button
         type="button"
-        className="block px-2 cursor-pointer  py-2 pr-4 pl-3 select-none  rounded md:bg-transparent hover:text-yellow-700 md:p-0 "
+        className="block text-xs px-2 cursor-pointer  py-2 pr-4 pl-3 select-none h-full  rounded md:bg-transparent hover:text-yellow-700  md:p-0 "
         aria-current="page"
         onClick={() => {
           const anchor = document.querySelector(`#${props.href}`);
@@ -26,7 +26,7 @@ const NavLink = ({ yOffset = 0, ...props }) => {
           if (props.toggleOpen) props.toggleOpen();
         }}
       >
-        {props.label}{" "}
+        {props.label}
       </button>
     </li>
   );
