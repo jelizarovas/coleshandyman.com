@@ -1,6 +1,5 @@
 import { GiRoundStar } from "react-icons/gi";
 import { MdPhone, MdEmail } from "react-icons/md";
-import { services } from "./data";
 
 export const Header = ({ services, contact }) => {
   return (
@@ -76,13 +75,24 @@ export const Header = ({ services, contact }) => {
   );
 };
 
-const ServiceLink = ({ url, label }) => {
+const ServiceLink = ({ url, label, yOffset = -100 }) => {
   return (
     <li className="relative group md:w-full text-center">
       <span className=" absolute left-0  w-0 h-full bg-yellow-600   group-hover:w-full transition-all "></span>
-      <a href={`#${url}`} className="test h-full w-full px-2 select-none">
+      <button
+        type="button"
+        className="test h-full w-full px-2 select-none"
+        aria-current="page"
+        onClick={() => {
+          const anchor = document.querySelector(`#${url}`);
+          const y =
+            anchor.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+          window.history.replaceState("", "", `#${url}`);
+        }}
+      >
         {label}
-      </a>
+      </button>
     </li>
   );
 };
