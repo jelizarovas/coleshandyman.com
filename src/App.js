@@ -17,7 +17,7 @@ export function App() {
       <main>
         <About />
         <Services services={services} />
-        <Gallery photos={photos} />
+        {/* <Gallery photos={photos} /> */}
         {/* <Testimonials reviews={reviews} /> */}
         <FAQ questions={questions} />
         <ContactUs contact={contact} />

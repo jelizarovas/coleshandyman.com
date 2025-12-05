@@ -74,8 +74,7 @@ export const services = {
 export const questions = [
   {
     question: "What is your refund policy?",
-    answer:
-      " If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+    answer: "No refunds.",
   },
   {
     question: "Do you offer technical support?",
@@ -83,6 +82,8 @@ export const questions = [
   },
 ];
 
-export const reviews = [{ rating: 5, url: "", displayName: "", photoUrl: "", title: "", text: "" }];
+export const reviews = [
+  { rating: 5, url: "", displayName: "", photoUrl: "", title: "", text: "" },
+];
 
 export const photos = [{ url: "", description: "" }];

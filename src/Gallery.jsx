@@ -1,5 +1,5 @@
 import React from "react";
-import ReactGallery from "react-photo-gallery";
+// import ReactGallery from "react-photo-gallery";
 
 const images = [
   {
@@ -91,7 +91,7 @@ export const Gallery = () => {
   return (
     <section id="gallery" className="text-gray-700 ">
       <h2 className="text-3xl text-center py-5 font-bold">Gallery</h2>
-      <ReactGallery
+      <GridGallery
         photos={images.map((img) => ({
           ...img,
           src: process.env.PUBLIC_URL + img.src,
@@ -115,5 +115,15 @@ export const Gallery = () => {
       </ModalGateway>
      */}
     </section>
+  );
+};
+
+const GridGallery = (props) => {
+  return (
+    <div className="flex flex-wrap justify-center">
+      {props?.photos.map((img) => (
+        <img src={img.src} alt={img.src} width={120} height={160} />
+      ))}
+    </div>
   );
 };
